@@ -1,0 +1,148 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Ducks at Drupalaton",
+		"_postman_id": "dc907472-ae5f-e42c-7f15-2c0cab0779c1",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get CSRF Token",
+			"request": {
+				"url": {
+					"raw": "http://example.com/session/token?_format=json",
+					"protocol": "http",
+					"host": [
+						"example",
+						"com"
+					],
+					"path": [
+						"session",
+						"token"
+					],
+					"query": [
+						{
+							"key": "_format",
+							"value": "json",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Get node",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"username": "xxx",
+						"password": "xxx",
+						"saveHelperData": true,
+						"showPassword": false
+					}
+				},
+				"url": {
+					"raw": "http://example.com/node/2?_format=json",
+					"protocol": "http",
+					"host": [
+						"example",
+						"com"
+					],
+					"path": [
+						"node",
+						"2"
+					],
+					"query": [
+						{
+							"key": "_format",
+							"value": "json",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic eHh4Onh4eA==",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Create Handshake (node)",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"username": "xxx",
+						"password": "xxx",
+						"saveHelperData": true,
+						"showPassword": false
+					}
+				},
+				"url": {
+					"raw": "https://eample.com/entity/node?_format=json",
+					"protocol": "https",
+					"host": [
+						"eample",
+						"com"
+					],
+					"path": [
+						"entity",
+						"node"
+					],
+					"query": [
+						{
+							"key": "_format",
+							"value": "json",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Basic eHh4Onh4eA==",
+						"description": ""
+					},
+					{
+						"key": "X-CSRF-Token",
+						"value": "LMayXz8Vong4tJPlqv1k1hg6v8SH6iAvkN8ZbkdJLdc",
+						"description": "",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"type\": [\n        {\n            \"target_id\": \"handshake\",\n            \"target_type\": \"node_type\"\n        }\n    ],\n    \"title\": [\n        {\n            \"value\": \"test via postman\"\n        }\n    ],\n    \"field_object_id\": [\n        {\n            \"value\": \"add a duck identifier here\"\n        }\n    ]\n}\n"
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
